@@ -221,10 +221,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2022-12-28 22:47:16 / 修改时间：22:50:13" itemprop="dateCreated datePublished" datetime="2022-12-28T22:47:16+08:00">2022-12-28</time>
+              <time title="创建时间：2022-12-28 22:47:16" itemprop="dateCreated datePublished" datetime="2022-12-28T22:47:16+08:00">2022-12-28</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-12-29 22:25:10" itemprop="dateModified" datetime="2022-12-29T22:25:10+08:00">2022-12-29</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -232,6 +238,10 @@
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%89%8D%E7%AB%AF/React/" itemprop="url" rel="index"><span itemprop="name">React</span></a>
                 </span>
             </span>
 
@@ -260,7 +270,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="React基础知识点"><a href="#React基础知识点" class="headerlink" title="React基础知识点"></a>React基础知识点</h1><h2 id="什么是React-（★★★）"><a href="#什么是React-（★★★）" class="headerlink" title="什么是React （★★★）"></a>什么是React （★★★）</h2><p>React是一个用于构建用户界面的javaScript库，起源于facebook的内部项目，后续在13年开源了出来</p>
+          <h2 id="什么是React-（★★★）"><a href="#什么是React-（★★★）" class="headerlink" title="什么是React （★★★）"></a>什么是React （★★★）</h2><p>React是一个用于构建用户界面的javaScript库，起源于facebook的内部项目，后续在13年开源了出来</p>
 <h3 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h3><ul>
 <li>声明式</li>
 </ul>
@@ -273,345 +283,14 @@
 <li>学习一次，随处使用</li>
 </ul>
 <p>使用React可以开发Web应用，使用React可以开发移动端，可以开发VR应用</p>
-<h2 id="React基本使用"><a href="#React基本使用" class="headerlink" title="React基本使用"></a>React基本使用</h2><h3 id="React的安装"><a href="#React的安装" class="headerlink" title="React的安装"></a>React的安装</h3><p>npm i react react-dom </p>
-<ul>
-<li>react 包是核心，提供创建元素，组件等功能</li>
-<li>react-dom 包提供DOM相关功能</li>
-</ul>
-<h3 id="React的使用"><a href="#React的使用" class="headerlink" title="React的使用"></a>React的使用</h3><ul>
-<li>引入react和react-dom的两个js文件</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;./node_modules/react/umd/react.development.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;./node_modules/react-dom/umd/react-dom.development.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>创建React元素</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 创建元素节点</span></span><br><span class="line"><span class="comment">// 1. 元素名称</span></span><br><span class="line"><span class="comment">// 2. 元素属性 传递的是个对象</span></span><br><span class="line"><span class="comment">// 3. 元素内容</span></span><br><span class="line"><span class="keyword">let</span> title = <span class="title class_">React</span>.<span class="title function_">createElement</span>(<span class="string">&#x27;li&#x27;</span>, <span class="literal">null</span>, <span class="string">&#x27;hellow react&#x27;</span>);</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>渲染到页面</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 渲染到页面</span></span><br><span class="line"><span class="title class_">ReactDOM</span>.<span class="title function_">render</span>(title, root)</span><br></pre></td></tr></table></figure>
-
-<h2 id="React脚手架（★★★）"><a href="#React脚手架（★★★）" class="headerlink" title="React脚手架（★★★）"></a>React脚手架（★★★）</h2><h3 id="React脚手架意义"><a href="#React脚手架意义" class="headerlink" title="React脚手架意义"></a>React脚手架意义</h3><ul>
-<li>脚手架是开发现代Web应用的必备</li>
-<li>充分利用 Webpack，Babel，ESLint等工具辅助项目开发</li>
-<li>零配置，无需手动配置繁琐的工具即可使用</li>
-<li>关注业务，而不是工具配置</li>
-</ul>
-<h3 id="使用React脚手架初始化项目"><a href="#使用React脚手架初始化项目" class="headerlink" title="使用React脚手架初始化项目"></a>使用React脚手架初始化项目</h3><ul>
-<li>初始化项目，命令： npx create-react-app my-pro<ul>
-<li>npx 目的：提升包内提供的命令行工具的使用体验</li>
-<li>原来：先安装脚手架包，再使用这个包中提供的命令</li>
-<li>现在：无需安装脚手架包，就可以直接使用这个包提供的命令</li>
-<li>create-react-app  这个是脚手架名称 不能随意更改</li>
-<li>my-pro  自己定义的项目名称</li>
-</ul>
-</li>
-<li>启动项目，在项目根目录执行命令： npm start</li>
-</ul>
-<p>yarn命令简介</p>
-<ul>
-<li>yarn 是Facebook发布的包管理器，可以看做是npm的替代品，功能与npm相同</li>
-<li>yarn具有快速，可靠和安全的特点</li>
-<li>初始化新项目：yarn init</li>
-<li>安装包： yarn add 包名称</li>
-<li>安装项目依赖： yarn</li>
-</ul>
-<h3 id="脚手架中使用React"><a href="#脚手架中使用React" class="headerlink" title="脚手架中使用React"></a>脚手架中使用React</h3><ul>
-<li>导入react和react-dom两个包</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import React from &#x27;react&#x27;</span><br><span class="line">import ReactDOM from &#x27;react-dom&#x27;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>创建元素</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let h1 = React.createElement(&#x27;h1&#x27;,null,&#x27;我是标题&#x27;)</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>渲染到页面</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ReactDOM.render(h1,document.getElementById(&#x27;root&#x27;))</span><br></pre></td></tr></table></figure>
-
-<h1 id="JSX的使用"><a href="#JSX的使用" class="headerlink" title="JSX的使用"></a>JSX的使用</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><h4 id="JSX产生的原因"><a href="#JSX产生的原因" class="headerlink" title="JSX产生的原因"></a>JSX产生的原因</h4><p>由于通过createElement()方法创建的React元素有一些问题，代码比较繁琐，结构不直观，无法一眼看出描述的结构，不优雅，用户体验不爽</p>
-<h4 id="JSX的概述"><a href="#JSX的概述" class="headerlink" title="JSX的概述"></a>JSX的概述</h4><p>JSX是JavaScript XML 的简写，表示在JavaScript代码中写HTML格式的代码</p>
-<p>优势：声明式语法更加直观，与HTML结构相同，降低了学习成本，提升开发效率</p>
-<h2 id="简单入门使用（★★★）"><a href="#简单入门使用（★★★）" class="headerlink" title="简单入门使用（★★★）"></a>简单入门使用（★★★）</h2><h4 id="使用步骤"><a href="#使用步骤" class="headerlink" title="使用步骤"></a>使用步骤</h4><ul>
-<li>使用JSX语法创建react元素</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let h1 = &lt;h1&gt;我是通过JSX创建的元素&lt;/h1&gt;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>使用ReactDOM来渲染元素</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ReactDOM.render(h1,document.getElementById(&#x27;root&#x27;))</span><br></pre></td></tr></table></figure>
-
-<h4 id="为什么在脚手架中可以使用JSX语法"><a href="#为什么在脚手架中可以使用JSX语法" class="headerlink" title="为什么在脚手架中可以使用JSX语法"></a>为什么在脚手架中可以使用JSX语法</h4><ul>
-<li>JSX 不是标准的ECMAScript语法，它是ECMAScript的语法拓展</li>
-<li>需要使用babel编译处理后，才能在浏览器环境中使用</li>
-<li>create-react-app脚手架中已经默认有该配置，无需手动配置</li>
-<li>编译JSX语法的包： @bable&#x2F;preset-react</li>
-</ul>
-<h4 id="注意点"><a href="#注意点" class="headerlink" title="注意点"></a>注意点</h4><ul>
-<li>React元素的属性名使用驼峰命名法</li>
-<li>特殊属性名：class -&gt; className，for -&gt; htmlFor，tabindex -&gt; tabIndex</li>
-<li>如果没有子节点的React元素可以用 <code>/&gt;</code> 来结束</li>
-<li>推荐：使用 小括号包裹JSX，从而避免JS中自动插入分号报错</li>
-</ul>
-<h2 id="JSX语法（★★★）"><a href="#JSX语法（★★★）" class="headerlink" title="JSX语法（★★★）"></a>JSX语法（★★★）</h2><p>JSX是来描述页面的结构，我们一般在编写业务逻辑渲染页面的时候，需要涉及到传递值，调用函数，判断条件，循环等，这一些在JSX中都能得到支持</p>
-<h4 id="嵌入JS表达式"><a href="#嵌入JS表达式" class="headerlink" title="嵌入JS表达式"></a>嵌入JS表达式</h4><p>语法：{JavaScritp表达式}</p>
-<p>例子：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">let content = &#x27;插入的内容&#x27;</span><br><span class="line">let h1 = &lt;h1&gt;我是通过JSX创建的元素+ &#123;content&#125;&lt;/h1&gt;</span><br></pre></td></tr></table></figure>
-
-<h5 id="注意点-1"><a href="#注意点-1" class="headerlink" title="注意点"></a>注意点</h5><ul>
-<li>只要是合法的js表达式都可以进行嵌入</li>
-<li>JSX自身也是js表达式</li>
-<li>注意：js中的对象是一个例外，一般只会出现在style属性中</li>
-<li>注意：在{}中不能出现语句</li>
-</ul>
-<h4 id="条件渲染"><a href="#条件渲染" class="headerlink" title="条件渲染"></a>条件渲染</h4><p>根据不同的条件来渲染不同的JSX结构</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">let isLoading = true</span><br><span class="line">let loading = ()=&gt;&#123;</span><br><span class="line">    if(isLoading)&#123;</span><br><span class="line">        return &lt;div&gt;Loading...&lt;/div&gt;</span><br><span class="line">    &#125;</span><br><span class="line">    return &lt;div&gt;加载完成&lt;/div&gt;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>可以发现，写JSX的条件渲染与我们之前编写代码的逻辑是差不多的，根据不同的判断逻辑，返回不同的 JSX结构，然后渲染到页面中</p>
-<h4 id="列表渲染"><a href="#列表渲染" class="headerlink" title="列表渲染"></a>列表渲染</h4><ul>
-<li>如果需要渲染一组数据，我们应该使用数组的 map () 方法</li>
-<li>注意：渲染列表的时候需要添加key属性，key属性的值要保证唯一</li>
-<li>原则：map()遍历谁，就给谁添加key属性</li>
-<li>注意：尽量避免使用索引号作为key</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">let arr = [&#123;</span><br><span class="line">    id:1,</span><br><span class="line">    name:&#x27;三国演义&#x27;</span><br><span class="line">&#125;,&#123;</span><br><span class="line">    id:2,</span><br><span class="line">    name:&#x27;水浒传&#x27;</span><br><span class="line">&#125;,&#123;</span><br><span class="line">    id:3,</span><br><span class="line">    name:&#x27;西游记&#x27;</span><br><span class="line">&#125;,&#123;</span><br><span class="line">    id:4,</span><br><span class="line">    name:&#x27;红楼梦&#x27;</span><br><span class="line">&#125;]</span><br><span class="line">let ul = (&lt;ul&gt;</span><br><span class="line">    &#123;arr.map(item =&gt; &lt;li key=&#123;item.id&#125;&gt;&#123;item.name&#125;&lt;/li&gt;)&#125;</span><br><span class="line">&lt;/ul&gt;)</span><br><span class="line">ReactDOM.render(ul,document.getElementById(&#x27;root&#x27;))</span><br></pre></td></tr></table></figure>
-
-<h4 id="样式处理"><a href="#样式处理" class="headerlink" title="样式处理"></a>样式处理</h4><h5 id="行内样式-style"><a href="#行内样式-style" class="headerlink" title="行内样式 -style"></a>行内样式 -style</h5><p>在style里面我们通过对象的方式传递数据</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;li key=&#123;item.id&#125; style=&#123;&#123;&#x27;color&#x27;: &#x27;red&#x27;,&quot;backgroundColor&quot;: &#x27;pink&#x27;&#125;&#125;&gt;&#123;item.name&#125;&lt;/li&gt;</span><br></pre></td></tr></table></figure>
-
-<p>这种方式比较的麻烦，不方便进行阅读，而且还会导致代码比较的繁琐</p>
-<h5 id="类名-className"><a href="#类名-className" class="headerlink" title="类名 -className"></a>类名 -className</h5><p>创建CSS文件编写样式代码</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">    <span class="attribute">text-align</span>: center</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>在js中进行引入，然后设置类名即可</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import &#x27;./css/index.css&#x27;</span><br><span class="line"></span><br><span class="line">&lt;li className=&#x27;container&#x27; key=&#123;item.id&#125; style=&#123;&#123;&#x27;color&#x27;: &#x27;red&#x27;,&quot;backgroundColor&quot;: &#x27;pink&#x27;&#125;&#125;&gt;&#123;item.name&#125;&lt;/li&gt;</span><br></pre></td></tr></table></figure>
-
-<h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><ul>
-<li>JSX是React的核心内容</li>
-<li>JSX表示在JS代码中写HTML结构，是React声明式的体现</li>
-<li>使用JSX配合嵌入的JS表达式、条件渲染、列表渲染、可以描述任意UI结构</li>
-<li>推荐使用className的方式给JSX添加样式</li>
-<li>React完全利用JS语言自身的能力来编写UI，而不是造轮子增强HTML功能</li>
-</ul>
-<h1 id="React组件"><a href="#React组件" class="headerlink" title="React组件"></a>React组件</h1><h2 id="React组件介绍"><a href="#React组件介绍" class="headerlink" title="React组件介绍"></a>React组件介绍</h2><ul>
-<li>组件是React的一等公民，使用React就是在用组件</li>
-<li>组件表示页面中的部分功能</li>
-<li>组合多个组件实现完整的页面功能</li>
-<li>特点：可复用、独立、可组合</li>
-</ul>
-<p><img src="/2022/12/28/React-%E5%AD%A6%E4%B9%A0/%E7%BB%84%E4%BB%B6.png"></p>
-<h2 id="组件的创建方式"><a href="#组件的创建方式" class="headerlink" title="组件的创建方式"></a>组件的创建方式</h2><h3 id="函数创建组件"><a href="#函数创建组件" class="headerlink" title="函数创建组件"></a>函数创建组件</h3><ul>
-<li>函数组件：使用JS的函数创建组件</li>
-<li><strong>约定1：</strong>函数名称必须以大写字母开头</li>
-<li><strong>约定2：</strong>函数组件必须有返回值，表示该组件的结构</li>
-<li>如果返回值为null，表示不渲染任何内容</li>
-</ul>
-<h4 id="示例demo"><a href="#示例demo" class="headerlink" title="示例demo"></a>示例demo</h4><p>编写函数组件</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">function Hello() &#123;</span><br><span class="line">    return (</span><br><span class="line">        &lt;div&gt;这是第一个函数组件&lt;/div&gt;</span><br><span class="line">    )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>利用ReactDOM.render()进行渲染</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ReactDOM.render(&lt;Hello /&gt;,document.getElementById(&#x27;root&#x27;))</span><br></pre></td></tr></table></figure>
-
-<h3 id="类组件（★★★）"><a href="#类组件（★★★）" class="headerlink" title="类组件（★★★）"></a>类组件（★★★）</h3><ul>
-<li>使用ES6语法的class创建的组件</li>
-<li>约定1：类名称也必须要大写字母开头</li>
-<li>约定2：类组件应该继承React.Component父类，从而可以使用父类中提供的方法或者属性</li>
-<li>约定3：类组件必须提供 render 方法</li>
-<li>约定4：render方法中必须要有return返回值</li>
-</ul>
-<h4 id="示例demo-1"><a href="#示例demo-1" class="headerlink" title="示例demo"></a>示例demo</h4><p>创建class类，继承React.Component，在里面提供render方法，在return里面返回内容</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">class Hello extends React.Component&#123;</span><br><span class="line">    render()&#123;</span><br><span class="line">        return (</span><br><span class="line">            &lt;div&gt;这是第一个类组件&lt;/div&gt;</span><br><span class="line">        )</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>通过ReactDOM进行渲染</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ReactDOM.render(&lt;Hello /&gt;,document.getElementById(&#x27;root&#x27;))</span><br></pre></td></tr></table></figure>
-
-<h3 id="抽离成单独的JS文件（★★★）"><a href="#抽离成单独的JS文件（★★★）" class="headerlink" title="抽离成单独的JS文件（★★★）"></a>抽离成单独的JS文件（★★★）</h3><ul>
-<li>思考：项目中组件多了之后，该如何组织这些组件？</li>
-<li>选择一：将所有的组件放在同一个JS文件中</li>
-<li>选择二：将每个组件放到单独的JS文件中</li>
-<li><strong>组件作为一个独立的个体，一般都会放到一个单独的JS文件中</strong></li>
-</ul>
-<h4 id="示例demo-2"><a href="#示例demo-2" class="headerlink" title="示例demo"></a>示例demo</h4><ul>
-<li>创建Hello.js</li>
-<li>在Hello.js 中导入React，创建组件，在Hello.js中导出</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">import React from &#x27;react&#x27;</span><br><span class="line"></span><br><span class="line">export default class extends React.Component &#123;</span><br><span class="line">    render()&#123;</span><br><span class="line">        return (</span><br><span class="line">            &lt;div&gt;单独抽离出来的 Hello&lt;/div&gt;</span><br><span class="line">        )</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>在index.js中导入Hello组件，渲染到页面</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import Hello from &#x27;./js/Hello&#x27;</span><br><span class="line">ReactDOM.render(&lt;Hello /&gt;,document.getElementById(&#x27;root&#x27;))</span><br></pre></td></tr></table></figure>
-
-<h2 id="React事件处理（★★★）"><a href="#React事件处理（★★★）" class="headerlink" title="React事件处理（★★★）"></a>React事件处理（★★★）</h2><h3 id="事件绑定"><a href="#事件绑定" class="headerlink" title="事件绑定"></a>事件绑定</h3><ul>
-<li>React事件绑定语法与DOM事件语法相似</li>
-<li>语法：on+事件名称&#x3D;事件处理函数，比如  onClick &#x3D; function(){}</li>
-<li>注意：React事件采用驼峰命名法</li>
-</ul>
-<h4 id="示例demo-3"><a href="#示例demo-3" class="headerlink" title="示例demo"></a>示例demo</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">export default class extends React.Component &#123;</span><br><span class="line">    clickHandle(e)&#123;</span><br><span class="line">        console.log(&#x27;点了&#x27;)</span><br><span class="line">    &#125;</span><br><span class="line">    render()&#123;</span><br><span class="line">        return (</span><br><span class="line">            &lt;div&gt;&lt;button onClick = &#123;this.clickHandle&#125;&gt;点我点我点我&lt;/button&gt;&lt;/div&gt;</span><br><span class="line">        )</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="小结-1"><a href="#小结-1" class="headerlink" title="小结"></a>小结</h4><ul>
-<li>在React中绑定事件与原生很类似</li>
-<li>需要注意点在于，在React绑定事件需要遵循驼峰命名法</li>
-<li>类组件与函数组件绑定事件是差不多的，只是在类组件中绑定事件函数的时候需要用到this，代表指向当前的类的引用，在函数中不需要调用this</li>
-</ul>
-<h3 id="事件对象"><a href="#事件对象" class="headerlink" title="事件对象"></a>事件对象</h3><ul>
-<li>可以通过事件处理函数的参数获取到事件对象</li>
-<li>React中的事件对象叫做：合成事件</li>
-<li>合成事件：兼容所有浏览器，无需担心跨浏览器兼容问题</li>
-<li>除兼容所有浏览器外，它还拥有和浏览器原生事件相同的接口，包括 <code>stopPropagation()</code>和 <code>preventDefault()</code></li>
-<li>如果你想获取到原生事件对象，可以通过 <code>nativeEvent</code> 属性来进行获取</li>
-</ul>
-<h4 id="示例demo-4"><a href="#示例demo-4" class="headerlink" title="示例demo"></a>示例demo</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">export default class extends React.Component &#123;</span><br><span class="line">    clickHandle(e)&#123;</span><br><span class="line">        // 获取原生事件对象</span><br><span class="line">        console.log(e.nativeEvent)</span><br><span class="line">    &#125;</span><br><span class="line">    render()&#123;</span><br><span class="line">        return (</span><br><span class="line">            &lt;div&gt;&lt;button onClick = &#123;this.clickHandle&#125;&gt;点我点我点我&lt;/button&gt;&lt;/div&gt;</span><br><span class="line">        )</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="支持的事件"><a href="#支持的事件" class="headerlink" title="支持的事件"></a>支持的事件</h3><ul>
-<li><p>Clipboard Events  剪切板事件</p>
-<ul>
-<li>事件名 ：onCopy onCut onPaste</li>
-<li>属性     ：DOMDataTransfer clipboardData</li>
-</ul>
-</li>
-<li><p>compositionEvent  复合事件</p>
-<ul>
-<li>事件名： onCompositionEnd onCompositionStart onCompositionUpdate</li>
-<li>属性： string data</li>
-</ul>
-</li>
-<li><p>Keyboard Events  键盘事件</p>
-<ul>
-<li>事件名：onKeyDown onKeyPress onKeyUp</li>
-<li>属性： 例如 number keyCode  太多就不一一列举</li>
-</ul>
-</li>
-<li><p>Focus Events  焦点事件  （这些焦点事件在 React DOM 上的所有元素都有效，不只是表单元素）</p>
-<ul>
-<li>事件名： onFocus onBlur</li>
-<li>属性： DOMEventTarget relatedTarget</li>
-</ul>
-</li>
-<li><p>Form Events  表单事件</p>
-<ul>
-<li>事件名： onChange onInput onInvalid onSubmit</li>
-</ul>
-</li>
-<li><p>Mouse Events  鼠标事件</p>
-<ul>
-<li><p>事件名：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">onClick onContextMenu onDoubleClick onDrag onDragEnd onDragEnter onDragExit</span><br><span class="line">onDragLeave onDragOver onDragStart onDrop onMouseDown onMouseEnter onMouseLeave</span><br><span class="line">onMouseMove onMouseOut onMouseOver onMouseUp</span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-<li><p>Pointer Events  指针事件</p>
-<ul>
-<li><p>事件名：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">onPointerDown onPointerMove onPointerUp onPointerCancel onGotPointerCapture</span><br><span class="line">onLostPointerCapture onPointerEnter onPointerLeave onPointerOver onPointerOut</span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-<li><p>Selection Events  选择事件</p>
-<ul>
-<li>事件名：onSelect</li>
-</ul>
-</li>
-<li><p>Touch Events  触摸事件</p>
-<ul>
-<li>事件名：onTouchCancel onTouchEnd onTouchMove onTouchStart</li>
-</ul>
-</li>
-<li><p>UI Events  UI 事件</p>
-<ul>
-<li>事件名： onScroll</li>
-</ul>
-</li>
-<li><p>Wheel Events  滚轮事件</p>
-<ul>
-<li><p>事件名：onWheel</p>
-</li>
-<li><p>属性： </p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">number deltaMode</span><br><span class="line">number deltaX</span><br><span class="line">number deltaY</span><br><span class="line">number deltaZ</span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-<li><p>Media Events  媒体事件</p>
-<ul>
-<li><p>事件名：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">onAbort onCanPlay onCanPlayThrough onDurationChange onEmptied onEncrypted</span><br><span class="line">onEnded onError onLoadedData onLoadedMetadata onLoadStart onPause onPlay</span><br><span class="line">onPlaying onProgress onRateChange onSeeked onSeeking onStalled onSuspend</span><br><span class="line">onTimeUpdate onVolumeChange onWaiting</span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-<li><p>Image Events 图像事件</p>
-<ul>
-<li>事件名：onLoad onError</li>
-</ul>
-</li>
-<li><p>Animation Events 动画事件</p>
-<ul>
-<li>事件名：onAnimationStart onAnimationEnd onAnimationIteration</li>
-</ul>
-</li>
-<li><p>Transition Events 过渡事件</p>
-<ul>
-<li>事件名：onTransitionEnd</li>
-</ul>
-</li>
-<li><p>Other Events  其他事件</p>
-<ul>
-<li>事件名： onToggle</li>
-</ul>
-</li>
-</ul>
-<h2 id="有状态组件和无状态组件"><a href="#有状态组件和无状态组件" class="headerlink" title="有状态组件和无状态组件"></a>有状态组件和无状态组件</h2><ul>
-<li>函数组件又叫做 无状态组件，类组件又叫做 有状态组件</li>
-<li>状态(state) 即数据</li>
-<li>函数组件没有自己的状态，只负责数据展示</li>
-<li>类组件有自己的状态，负责更新UI，让页面动起来</li>
-</ul>
-<p><img src="/2022/12/28/React-%E5%AD%A6%E4%B9%A0/%E7%8A%B6%E6%80%81.png"></p>
-<h2 id="State和SetState（★★★）"><a href="#State和SetState（★★★）" class="headerlink" title="State和SetState（★★★）"></a>State和SetState（★★★）</h2><h3 id="state基本使用"><a href="#state基本使用" class="headerlink" title="state基本使用"></a>state基本使用</h3><ul>
-<li>状态(state)即数据，是组件内部的私有数据，只能在组件内部使用</li>
-<li>state的值是对象，表示一个组件中可以有多个数据</li>
-<li>通过this.state来获取状态</li>
-</ul>
-<h4 id="示例demo-5"><a href="#示例demo-5" class="headerlink" title="示例demo"></a>示例demo</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">export default class extends React.Component &#123;</span><br><span class="line">    constructor()&#123;</span><br><span class="line">        super()</span><br><span class="line"></span><br><span class="line">        // 第一种初始化方式</span><br><span class="line">        this.state = &#123;</span><br><span class="line">            count : 0</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    // 第二种初始化方式</span><br><span class="line">    state = &#123;</span><br><span class="line">        count:1</span><br><span class="line">    &#125;</span><br><span class="line">    render()&#123;</span><br><span class="line">        return (</span><br><span class="line">            &lt;div&gt;计数器 :&#123;this.state.count&#125;&lt;/div&gt;</span><br><span class="line">        )</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="setState-修改状态"><a href="#setState-修改状态" class="headerlink" title="setState() 修改状态"></a>setState() 修改状态</h3><ul>
-<li>状态是可变的</li>
-<li>语法：this.setState({要修改的数据})</li>
-<li><strong>注意：不要直接修改state中的值，这是错误的</strong></li>
-<li>setState() 作用：1.修改 state 2.更新UI</li>
-<li>思想：数据驱动视图</li>
-</ul>
-<p><img src="/2022/12/28/React-%E5%AD%A6%E4%B9%A0/%E4%BF%AE%E6%94%B9%E7%8A%B6%E6%80%81.png"></p>
-<h4 id="示例demo-6"><a href="#示例demo-6" class="headerlink" title="示例demo"></a>示例demo</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">export default class extends React.Component &#123;</span><br><span class="line">    // 第二种初始化方式</span><br><span class="line">    state = &#123;</span><br><span class="line">        count:1</span><br><span class="line">    &#125;</span><br><span class="line">    render()&#123;</span><br><span class="line">        return (</span><br><span class="line">            &lt;div&gt;</span><br><span class="line">                &lt;div&gt;计数器 :&#123;this.state.count&#125;&lt;/div&gt;</span><br><span class="line">                &lt;button onClick=&#123;() =&gt; &#123;</span><br><span class="line">                     this.setState(&#123;</span><br><span class="line">            	 		count: this.state.count+1</span><br><span class="line">           			  &#125;)   </span><br><span class="line">                &#125;&#125;&gt;+1&lt;/button&gt;</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">        )</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="小结-2"><a href="#小结-2" class="headerlink" title="小结"></a>小结</h4><ul>
-<li>修改state里面的值我们需要通过 this.setState() 来进行修改</li>
-<li>React底层会有监听，一旦我们调用了setState导致了数据的变化，就会重新调用一次render方法，重新渲染当前组件</li>
-</ul>
-<h3 id="抽取事件处理函数"><a href="#抽取事件处理函数" class="headerlink" title="抽取事件处理函数"></a>抽取事件处理函数</h3><ul>
-<li>当我们把上面代码的事件处理程序抽取出来后，会报错，找不到this</li>
-</ul>
-<p><img src="/2022/12/28/React-%E5%AD%A6%E4%B9%A0/this%E6%89%BE%E4%B8%8D%E5%88%B0.png"></p>
-<h4 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h4><ul>
-<li>在JSX中我们写的事件处理函数可以找到this，原因在于在JSX中我们利用箭头函数，箭头函数是不会绑定this，所以会向外一层去寻找，外层是render方法，在render方法里面的this刚好指向的是当前实例对象</li>
-</ul>
-<h2 id="事件绑定this指向"><a href="#事件绑定this指向" class="headerlink" title="事件绑定this指向"></a>事件绑定this指向</h2><h3 id="箭头函数"><a href="#箭头函数" class="headerlink" title="箭头函数"></a>箭头函数</h3><ul>
-<li>利用箭头函数自身不绑定this的特点</li>
-</ul>
-<p><img src="/2022/12/28/React-%E5%AD%A6%E4%B9%A0/%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0.png"></p>
-<h3 id="利用bind方法（★★★）"><a href="#利用bind方法（★★★）" class="headerlink" title="利用bind方法（★★★）"></a>利用bind方法（★★★）</h3><p>利用原型bind方法是可以更改函数里面this的指向的，所以我们可以在构造中调用bind方法，然后把返回的值赋值给我们的函数即可</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">class App extends React.Component &#123;</span><br><span class="line">  constructor() &#123;</span><br><span class="line">    super()</span><br><span class="line">	...</span><br><span class="line">    // 通过bind方法改变了当前函数中this的指向</span><br><span class="line">    this.onIncrement = this.onIncrement.bind(this)</span><br><span class="line">  &#125;</span><br><span class="line">  // 事件处理程序</span><br><span class="line">  onIncrement() &#123;</span><br><span class="line">    ...</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  render() &#123;</span><br><span class="line">    ...</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="class的实例方法（★★★）"><a href="#class的实例方法（★★★）" class="headerlink" title="class的实例方法（★★★）"></a>class的实例方法（★★★）</h3><ul>
-<li>利用箭头函数形式的class实例方法</li>
-<li>注意：该语法是实验性语法，但是，由于babel的存在可以使用</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">// 事件处理程序</span><br><span class="line">onIncrement = () =&gt; &#123;</span><br><span class="line">  console.log(&#x27;事件处理程序中的this：&#x27;, this)</span><br><span class="line">  this.setState(&#123;</span><br><span class="line">    count: this.state.count + 1</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="小结-3"><a href="#小结-3" class="headerlink" title="小结"></a>小结</h3><ul>
-<li>推荐：使用class的实例方法，也是依赖箭头函数不绑定this的原因</li>
-</ul>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/12/28/React-%E5%AD%A6%E4%B9%A0/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -654,21 +333,27 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2022-12-28 22:30:55 / 修改时间：22:41:28" itemprop="dateCreated datePublished" datetime="2022-12-28T22:30:55+08:00">2022-12-28</time>
+              <time title="创建时间：2022-12-28 22:30:55" itemprop="dateCreated datePublished" datetime="2022-12-28T22:30:55+08:00">2022-12-28</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-12-29 22:27:22" itemprop="dateModified" datetime="2022-12-29T22:27:22+08:00">2022-12-29</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a>
+                  <a href="/categories/%E5%90%8E%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">后端</span></a>
                 </span>
                   ，
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java/%E5%90%8E%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">后端</span></a>
+                  <a href="/categories/%E5%90%8E%E7%AB%AF/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a>
                 </span>
             </span>
 
@@ -698,507 +383,14 @@
 
       
           <h1 id="1-微服务"><a href="#1-微服务" class="headerlink" title="1.微服务"></a>1.微服务</h1><p>随着互联网行业的发展，对服务的要求也越来越高，服务架构也从单体架构逐渐演变为现在流行的微服务架构。这些架构之间有怎样的差别呢？</p>
-<h2 id="1-1-单体架构"><a href="#1-1-单体架构" class="headerlink" title="1.1.单体架构"></a>1.1.单体架构</h2><p><strong>单体架构</strong>：将业务的所有功能集中在一个项目中开发，打成一个包部署。</p>
-<p><img src="/2022/12/28/spring-cloud-%E5%AD%A6%E4%B9%A0/image-20210713202807818.png" alt="image-20210713202807818"></p>
-<p>单体架构的优缺点如下：</p>
-<p><strong>优点：</strong></p>
-<ul>
-<li>架构简单</li>
-<li>部署成本低</li>
-</ul>
-<p><strong>缺点：</strong></p>
-<ul>
-<li>耦合度高（维护困难、升级困难）</li>
-</ul>
-<h2 id="1-2-分布式架构"><a href="#1-2-分布式架构" class="headerlink" title="1.2.分布式架构"></a>1.2.分布式架构</h2><p><strong>分布式架构</strong>：根据业务功能对系统做拆分，每个业务功能模块作为独立项目开发，称为一个服务。</p>
-<p><img src="/2022/12/28/spring-cloud-%E5%AD%A6%E4%B9%A0/image-20210713203124797.png" alt="image-20210713203124797"></p>
-<p>分布式架构的优缺点：</p>
-<p><strong>优点：</strong></p>
-<ul>
-<li>降低服务耦合</li>
-<li>有利于服务升级和拓展</li>
-</ul>
-<p><strong>缺点：</strong></p>
-<ul>
-<li>服务调用关系错综复杂</li>
-</ul>
-<p>分布式架构虽然降低了服务耦合，但是服务拆分时也有很多问题需要思考：</p>
-<ul>
-<li>服务拆分的粒度如何界定？</li>
-<li>服务之间如何调用？</li>
-<li>服务的调用关系如何管理？</li>
-</ul>
-<p>人们需要制定一套行之有效的标准来约束分布式架构。</p>
-<h2 id="1-3-微服务"><a href="#1-3-微服务" class="headerlink" title="1.3.微服务"></a>1.3.微服务</h2><p>微服务的架构特征：</p>
-<ul>
-<li>单一职责：微服务拆分粒度更小，每一个服务都对应唯一的业务能力，做到单一职责</li>
-<li>自治：团队独立、技术独立、数据独立，独立部署和交付</li>
-<li>面向服务：服务提供统一标准的接口，与语言和技术无关</li>
-<li>隔离性强：服务调用做好隔离、容错、降级，避免出现级联问题</li>
-</ul>
-<p><img src="/2022/12/28/spring-cloud-%E5%AD%A6%E4%B9%A0/image-20210713203753373.png" alt="image-20210713203753373"></p>
-<p>微服务的上述特性其实是在给分布式架构制定一个标准，进一步降低服务之间的耦合度，提供服务的独立性和灵活性。做到高内聚，低耦合。</p>
-<p>因此，可以认为<strong>微服务</strong>是一种经过良好架构设计的<strong>分布式架构方案</strong> 。</p>
-<p>但方案该怎么落地？选用什么样的技术栈？全球的互联网公司都在积极尝试自己的微服务落地方案。</p>
-<p>其中在Java领域最引人注目的就是SpringCloud提供的方案了。</p>
-<h2 id="1-4-SpringCloud"><a href="#1-4-SpringCloud" class="headerlink" title="1.4.SpringCloud"></a>1.4.SpringCloud</h2><p>SpringCloud是目前国内使用最广泛的微服务框架。官网地址：<a target="_blank" rel="noopener" href="https://spring.io/projects/spring-cloud%E3%80%82">https://spring.io/projects/spring-cloud。</a></p>
-<p>SpringCloud集成了各种微服务功能组件，并基于SpringBoot实现了这些组件的自动装配，从而提供了良好的开箱即用体验。</p>
-<p>其中常见的组件包括：</p>
-<p><img src="/2022/12/28/spring-cloud-%E5%AD%A6%E4%B9%A0/image-20210713204155887.png" alt="image-20210713204155887"></p>
-<p>另外，SpringCloud底层是依赖于SpringBoot的，并且有版本的兼容关系，如下：</p>
-<p><img src="/2022/12/28/spring-cloud-%E5%AD%A6%E4%B9%A0/image-20210713205003790.png" alt="image-20210713205003790"></p>
-<p>我们课堂学习的版本是 Hoxton.SR10，因此对应的SpringBoot版本是2.3.x版本。</p>
-<h2 id="1-5-总结"><a href="#1-5-总结" class="headerlink" title="1.5.总结"></a>1.5.总结</h2><ul>
-<li><p>单体架构：简单方便，高度耦合，扩展性差，适合小型项目。例如：学生管理系统</p>
-</li>
-<li><p>分布式架构：松耦合，扩展性好，但架构复杂，难度大。适合大型互联网项目，例如：京东、淘宝</p>
-</li>
-<li><p>微服务：一种良好的分布式架构方案</p>
-<p>①优点：拆分粒度更小、服务更独立、耦合度更低</p>
-<p>②缺点：架构非常复杂，运维、监控、部署难度提高</p>
-</li>
-<li><p>SpringCloud是微服务架构的一站式解决方案，集成了各种优秀微服务功能组件</p>
-</li>
-</ul>
-<h1 id="2-服务拆分和远程调用"><a href="#2-服务拆分和远程调用" class="headerlink" title="2.服务拆分和远程调用"></a>2.服务拆分和远程调用</h1><p>任何分布式架构都离不开服务的拆分，微服务也是一样。</p>
-<h2 id="2-1-服务拆分原则"><a href="#2-1-服务拆分原则" class="headerlink" title="2.1.服务拆分原则"></a>2.1.服务拆分原则</h2><p>这里我总结了微服务拆分时的几个原则：</p>
-<ul>
-<li>不同微服务，不要重复开发相同业务</li>
-<li>微服务数据独立，不要访问其它微服务的数据库</li>
-<li>微服务可以将自己的业务暴露为接口，供其它微服务调用</li>
-</ul>
-<p><img src="/2022/12/28/spring-cloud-%E5%AD%A6%E4%B9%A0/image-20210713210800950.png" alt="image-20210713210800950"></p>
-<h2 id="2-2-服务拆分示例"><a href="#2-2-服务拆分示例" class="headerlink" title="2.2.服务拆分示例"></a>2.2.服务拆分示例</h2><p>以课前资料中的微服务cloud-demo为例，其结构如下：</p>
-<p><img src="/2022/12/28/spring-cloud-%E5%AD%A6%E4%B9%A0/image-20210713211009593.png" alt="image-20210713211009593"></p>
-<p>cloud-demo：父工程，管理依赖</p>
-<ul>
-<li>order-service：订单微服务，负责订单相关业务</li>
-<li>user-service：用户微服务，负责用户相关业务</li>
-</ul>
-<p>要求：</p>
-<ul>
-<li>订单微服务和用户微服务都必须有各自的数据库，相互独立</li>
-<li>订单服务和用户服务都对外暴露Restful的接口</li>
-<li>订单服务如果需要查询用户信息，只能调用用户服务的Restful接口，不能查询用户数据库</li>
-</ul>
-<h3 id="2-2-1-导入Sql语句"><a href="#2-2-1-导入Sql语句" class="headerlink" title="2.2.1.导入Sql语句"></a>2.2.1.导入Sql语句</h3><p>首先，将课前资料提供的<code>cloud-order.sql</code>和<code>cloud-user.sql</code>导入到mysql中：</p>
-<p><img src="/2022/12/28/spring-cloud-%E5%AD%A6%E4%B9%A0/image-20210713211417049.png" alt="image-20210713211417049"></p>
-<p>cloud-user表中初始数据如下：</p>
-<p><img src="/2022/12/28/spring-cloud-%E5%AD%A6%E4%B9%A0/image-20210713211550169.png" alt="image-20210713211550169"></p>
-<p>cloud-order表中初始数据如下：</p>
-<p><img src="/2022/12/28/spring-cloud-%E5%AD%A6%E4%B9%A0/image-20210713211657319.png" alt="image-20210713211657319"></p>
-<p>cloud-order表中持有cloud-user表中的id字段。</p>
-<h3 id="2-2-2-导入demo工程"><a href="#2-2-2-导入demo工程" class="headerlink" title="2.2.2.导入demo工程"></a>2.2.2.导入demo工程</h3><p>用IDEA导入课前资料提供的Demo：</p>
-<p><img src="/2022/12/28/spring-cloud-%E5%AD%A6%E4%B9%A0/image-20210713211814094.png" alt="image-20210713211814094"></p>
-<p>项目结构如下：</p>
-<p><img src="/2022/12/28/spring-cloud-%E5%AD%A6%E4%B9%A0/image-20210713212656887.png" alt="image-20210713212656887"></p>
-<p>导入后，会在IDEA右下角出现弹窗：</p>
-<p><img src="/2022/12/28/spring-cloud-%E5%AD%A6%E4%B9%A0/image-20210713212349272.png" alt="image-20210713212349272"></p>
-<p>点击弹窗，然后按下图选择：</p>
-<p><img src="/2022/12/28/spring-cloud-%E5%AD%A6%E4%B9%A0/image-20210713212336185.png" alt="image-20210713212336185"></p>
-<p>会出现这样的菜单：</p>
-<p><img src="/2022/12/28/spring-cloud-%E5%AD%A6%E4%B9%A0/image-20210713212513324.png" alt="image-20210713212513324"></p>
-<p>配置下项目使用的JDK：</p>
-<p><img src="/2022/12/28/spring-cloud-%E5%AD%A6%E4%B9%A0/image-20210713220736408.png" alt="image-20210713220736408"></p>
-<h2 id="2-3-实现远程调用案例"><a href="#2-3-实现远程调用案例" class="headerlink" title="2.3.实现远程调用案例"></a>2.3.实现远程调用案例</h2><p>在order-service服务中，有一个根据id查询订单的接口：</p>
-<p><img src="/2022/12/28/spring-cloud-%E5%AD%A6%E4%B9%A0/image-20210713212749575.png" alt="image-20210713212749575"></p>
-<p>根据id查询订单，返回值是Order对象，如图：</p>
-<p><img src="/2022/12/28/spring-cloud-%E5%AD%A6%E4%B9%A0/image-20210713212901725.png" alt="image-20210713212901725"></p>
-<p>其中的user为null</p>
-<p>在user-service中有一个根据id查询用户的接口：</p>
-<p><img src="/2022/12/28/spring-cloud-%E5%AD%A6%E4%B9%A0/image-20210713213146089.png" alt="image-20210713213146089"></p>
-<p>查询的结果如图：</p>
-<p><img src="/2022/12/28/spring-cloud-%E5%AD%A6%E4%B9%A0/image-20210713213213075.png" alt="image-20210713213213075"></p>
-<h3 id="2-3-1-案例需求："><a href="#2-3-1-案例需求：" class="headerlink" title="2.3.1.案例需求："></a>2.3.1.案例需求：</h3><p>修改order-service中的根据id查询订单业务，要求在查询订单的同时，根据订单中包含的userId查询出用户信息，一起返回。</p>
-<p><img src="/2022/12/28/spring-cloud-%E5%AD%A6%E4%B9%A0/image-20210713213312278.png" alt="image-20210713213312278"></p>
-<p>因此，我们需要在order-service中 向user-service发起一个http的请求，调用<a target="_blank" rel="noopener" href="http://localhost:8081/user/%7BuserId%7D%E8%BF%99%E4%B8%AA%E6%8E%A5%E5%8F%A3%E3%80%82">http://localhost:8081/user/{userId}这个接口。</a></p>
-<p>大概的步骤是这样的：</p>
-<ul>
-<li>注册一个RestTemplate的实例到Spring容器</li>
-<li>修改order-service服务中的OrderService类中的queryOrderById方法，根据Order对象中的userId查询User</li>
-<li>将查询的User填充到Order对象，一起返回</li>
-</ul>
-<h3 id="2-3-2-注册RestTemplate"><a href="#2-3-2-注册RestTemplate" class="headerlink" title="2.3.2.注册RestTemplate"></a>2.3.2.注册RestTemplate</h3><p>首先，我们在order-service服务中的OrderApplication启动类中，注册RestTemplate实例：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> cn.itcast.order;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.mybatis.spring.annotation.MapperScan;</span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.SpringApplication;</span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.autoconfigure.SpringBootApplication;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.Bean;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.client.RestTemplate;</span><br><span class="line"></span><br><span class="line"><span class="meta">@MapperScan(&quot;cn.itcast.order.mapper&quot;)</span></span><br><span class="line"><span class="meta">@SpringBootApplication</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">OrderApplication</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        SpringApplication.run(OrderApplication.class, args);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="keyword">public</span> RestTemplate <span class="title function_">restTemplate</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">RestTemplate</span>();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="2-3-3-实现远程调用"><a href="#2-3-3-实现远程调用" class="headerlink" title="2.3.3.实现远程调用"></a>2.3.3.实现远程调用</h3><p>修改order-service服务中的cn.itcast.order.service包下的OrderService类中的queryOrderById方法：</p>
-<p><img src="/2022/12/28/spring-cloud-%E5%AD%A6%E4%B9%A0/image-20210713213959569.png" alt="image-20210713213959569"></p>
-<h2 id="2-4-提供者与消费者"><a href="#2-4-提供者与消费者" class="headerlink" title="2.4.提供者与消费者"></a>2.4.提供者与消费者</h2><p>在服务调用关系中，会有两个不同的角色：</p>
-<p><strong>服务提供者</strong>：一次业务中，被其它微服务调用的服务。（提供接口给其它微服务）</p>
-<p><strong>服务消费者</strong>：一次业务中，调用其它微服务的服务。（调用其它微服务提供的接口）</p>
-<p><img src="/2022/12/28/spring-cloud-%E5%AD%A6%E4%B9%A0/image-20210713214404481.png" alt="image-20210713214404481"></p>
-<p>但是，服务提供者与服务消费者的角色并不是绝对的，而是相对于业务而言。</p>
-<p>如果服务A调用了服务B，而服务B又调用了服务C，服务B的角色是什么？</p>
-<ul>
-<li>对于A调用B的业务而言：A是服务消费者，B是服务提供者</li>
-<li>对于B调用C的业务而言：B是服务消费者，C是服务提供者</li>
-</ul>
-<p>因此，服务B既可以是服务提供者，也可以是服务消费者。</p>
-<h1 id="3-Eureka注册中心"><a href="#3-Eureka注册中心" class="headerlink" title="3.Eureka注册中心"></a>3.Eureka注册中心</h1><p>假如我们的服务提供者user-service部署了多个实例，如图：</p>
-<p><img src="/2022/12/28/spring-cloud-%E5%AD%A6%E4%B9%A0/image-20210713214925388.png" alt="image-20210713214925388"></p>
-<p>大家思考几个问题：</p>
-<ul>
-<li>order-service在发起远程调用的时候，该如何得知user-service实例的ip地址和端口？</li>
-<li>有多个user-service实例地址，order-service调用时该如何选择？</li>
-<li>order-service如何得知某个user-service实例是否依然健康，是不是已经宕机？</li>
-</ul>
-<h2 id="3-1-Eureka的结构和作用"><a href="#3-1-Eureka的结构和作用" class="headerlink" title="3.1.Eureka的结构和作用"></a>3.1.Eureka的结构和作用</h2><p>这些问题都需要利用SpringCloud中的注册中心来解决，其中最广为人知的注册中心就是Eureka，其结构如下：</p>
-<p><img src="/2022/12/28/spring-cloud-%E5%AD%A6%E4%B9%A0/image-20210713220104956.png" alt="image-20210713220104956"></p>
-<p>回答之前的各个问题。</p>
-<p>问题1：order-service如何得知user-service实例地址？</p>
-<p>获取地址信息的流程如下：</p>
-<ul>
-<li>user-service服务实例启动后，将自己的信息注册到eureka-server（Eureka服务端）。这个叫服务注册</li>
-<li>eureka-server保存服务名称到服务实例地址列表的映射关系</li>
-<li>order-service根据服务名称，拉取实例地址列表。这个叫服务发现或服务拉取</li>
-</ul>
-<p>问题2：order-service如何从多个user-service实例中选择具体的实例？</p>
-<ul>
-<li>order-service从实例列表中利用负载均衡算法选中一个实例地址</li>
-<li>向该实例地址发起远程调用</li>
-</ul>
-<p>问题3：order-service如何得知某个user-service实例是否依然健康，是不是已经宕机？</p>
-<ul>
-<li>user-service会每隔一段时间（默认30秒）向eureka-server发起请求，报告自己状态，称为心跳</li>
-<li>当超过一定时间没有发送心跳时，eureka-server会认为微服务实例故障，将该实例从服务列表中剔除</li>
-<li>order-service拉取服务时，就能将故障实例排除了</li>
-</ul>
-<blockquote>
-<p>注意：一个微服务，既可以是服务提供者，又可以是服务消费者，因此eureka将服务注册、服务发现等功能统一封装到了eureka-client端</p>
-</blockquote>
-<p>因此，接下来我们动手实践的步骤包括：</p>
-<p><img src="/2022/12/28/spring-cloud-%E5%AD%A6%E4%B9%A0/image-20210713220509769.png" alt="image-20210713220509769"></p>
-<h2 id="3-2-搭建eureka-server"><a href="#3-2-搭建eureka-server" class="headerlink" title="3.2.搭建eureka-server"></a>3.2.搭建eureka-server</h2><p>首先大家注册中心服务端：eureka-server，这必须是一个独立的微服务</p>
-<h3 id="3-2-1-创建eureka-server服务"><a href="#3-2-1-创建eureka-server服务" class="headerlink" title="3.2.1.创建eureka-server服务"></a>3.2.1.创建eureka-server服务</h3><p>在cloud-demo父工程下，创建一个子模块：</p>
-<p><img src="/2022/12/28/spring-cloud-%E5%AD%A6%E4%B9%A0/image-20210713220605881.png" alt="image-20210713220605881"></p>
-<p>填写模块信息：</p>
-<p><img src="/2022/12/28/spring-cloud-%E5%AD%A6%E4%B9%A0/image-20210713220857396.png" alt="image-20210713220857396"></p>
-<p>然后填写服务信息：</p>
-<p><img src="/2022/12/28/spring-cloud-%E5%AD%A6%E4%B9%A0/image-20210713221339022.png" alt="image-20210713221339022"></p>
-<h3 id="3-2-2-引入eureka依赖"><a href="#3-2-2-引入eureka依赖" class="headerlink" title="3.2.2.引入eureka依赖"></a>3.2.2.引入eureka依赖</h3><p>引入SpringCloud为eureka提供的starter依赖：</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-starter-netflix-eureka-server<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="3-2-3-编写启动类"><a href="#3-2-3-编写启动类" class="headerlink" title="3.2.3.编写启动类"></a>3.2.3.编写启动类</h3><p>给eureka-server服务编写一个启动类，一定要添加一个@EnableEurekaServer注解，开启eureka的注册中心功能：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> cn.itcast.eureka;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.SpringApplication;</span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.autoconfigure.SpringBootApplication;</span><br><span class="line"><span class="keyword">import</span> org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;</span><br><span class="line"></span><br><span class="line"><span class="meta">@SpringBootApplication</span></span><br><span class="line"><span class="meta">@EnableEurekaServer</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">EurekaApplication</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        SpringApplication.run(EurekaApplication.class, args);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="3-2-4-编写配置文件"><a href="#3-2-4-编写配置文件" class="headerlink" title="3.2.4.编写配置文件"></a>3.2.4.编写配置文件</h3><p>编写一个application.yml文件，内容如下：</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">server:</span></span><br><span class="line">  <span class="attr">port:</span> <span class="number">10086</span></span><br><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">application:</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">eureka-server</span></span><br><span class="line"><span class="attr">eureka:</span></span><br><span class="line">  <span class="attr">client:</span></span><br><span class="line">    <span class="attr">service-url:</span> </span><br><span class="line">      <span class="attr">defaultZone:</span> <span class="string">http://127.0.0.1:10086/eureka</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="3-2-5-启动服务"><a href="#3-2-5-启动服务" class="headerlink" title="3.2.5.启动服务"></a>3.2.5.启动服务</h3><p>启动微服务，然后在浏览器访问：<a target="_blank" rel="noopener" href="http://127.0.0.1:10086/">http://127.0.0.1:10086</a></p>
-<p>看到下面结果应该是成功了：</p>
-<p><img src="/2022/12/28/spring-cloud-%E5%AD%A6%E4%B9%A0/image-20210713222157190.png" alt="image-20210713222157190"></p>
-<h2 id="3-3-服务注册"><a href="#3-3-服务注册" class="headerlink" title="3.3.服务注册"></a>3.3.服务注册</h2><p>下面，我们将user-service注册到eureka-server中去。</p>
-<h3 id="1）引入依赖"><a href="#1）引入依赖" class="headerlink" title="1）引入依赖"></a>1）引入依赖</h3><p>在user-service的pom文件中，引入下面的eureka-client依赖：</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-starter-netflix-eureka-client<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="2）配置文件"><a href="#2）配置文件" class="headerlink" title="2）配置文件"></a>2）配置文件</h3><p>在user-service中，修改application.yml文件，添加服务名称、eureka地址：</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">application:</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">userservice</span></span><br><span class="line"><span class="attr">eureka:</span></span><br><span class="line">  <span class="attr">client:</span></span><br><span class="line">    <span class="attr">service-url:</span></span><br><span class="line">      <span class="attr">defaultZone:</span> <span class="string">http://127.0.0.1:10086/eureka</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="3）启动多个user-service实例"><a href="#3）启动多个user-service实例" class="headerlink" title="3）启动多个user-service实例"></a>3）启动多个user-service实例</h3><p>为了演示一个服务有多个实例的场景，我们添加一个SpringBoot的启动配置，再启动一个user-service。</p>
-<p>首先，复制原来的user-service启动配置：</p>
-<p><img src="/2022/12/28/spring-cloud-%E5%AD%A6%E4%B9%A0/image-20210713222656562.png" alt="image-20210713222656562"></p>
-<p>然后，在弹出的窗口中，填写信息：</p>
-<p><img src="/2022/12/28/spring-cloud-%E5%AD%A6%E4%B9%A0/image-20210713222757702.png" alt="image-20210713222757702"></p>
-<p>现在，SpringBoot窗口会出现两个user-service启动配置：</p>
-<p><img src="/2022/12/28/spring-cloud-%E5%AD%A6%E4%B9%A0/image-20210713222841951.png" alt="image-20210713222841951"></p>
-<p>不过，第一个是8081端口，第二个是8082端口。</p>
-<p>启动两个user-service实例：</p>
-<p><img src="/2022/12/28/spring-cloud-%E5%AD%A6%E4%B9%A0/image-20210713223041491.png" alt="image-20210713223041491"></p>
-<p>查看eureka-server管理页面：</p>
-<p><img src="/2022/12/28/spring-cloud-%E5%AD%A6%E4%B9%A0/image-20210713223150650.png" alt="image-20210713223150650"></p>
-<h2 id="3-4-服务发现"><a href="#3-4-服务发现" class="headerlink" title="3.4.服务发现"></a>3.4.服务发现</h2><p>下面，我们将order-service的逻辑修改：向eureka-server拉取user-service的信息，实现服务发现。</p>
-<h3 id="1）引入依赖-1"><a href="#1）引入依赖-1" class="headerlink" title="1）引入依赖"></a>1）引入依赖</h3><p>之前说过，服务发现、服务注册统一都封装在eureka-client依赖，因此这一步与服务注册时一致。</p>
-<p>在order-service的pom文件中，引入下面的eureka-client依赖：</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-starter-netflix-eureka-client<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="2）配置文件-1"><a href="#2）配置文件-1" class="headerlink" title="2）配置文件"></a>2）配置文件</h3><p>服务发现也需要知道eureka地址，因此第二步与服务注册一致，都是配置eureka信息：</p>
-<p>在order-service中，修改application.yml文件，添加服务名称、eureka地址：</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">application:</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">orderservice</span></span><br><span class="line"><span class="attr">eureka:</span></span><br><span class="line">  <span class="attr">client:</span></span><br><span class="line">    <span class="attr">service-url:</span></span><br><span class="line">      <span class="attr">defaultZone:</span> <span class="string">http://127.0.0.1:10086/eureka</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="3）服务拉取和负载均衡"><a href="#3）服务拉取和负载均衡" class="headerlink" title="3）服务拉取和负载均衡"></a>3）服务拉取和负载均衡</h3><p>最后，我们要去eureka-server中拉取user-service服务的实例列表，并且实现负载均衡。</p>
-<p>不过这些动作不用我们去做，只需要添加一些注解即可。</p>
-<p>在order-service的OrderApplication中，给RestTemplate这个Bean添加一个@LoadBalanced注解：</p>
-<p><img src="/2022/12/28/spring-cloud-%E5%AD%A6%E4%B9%A0/image-20210713224049419.png" alt="image-20210713224049419"></p>
-<p>修改order-service服务中的cn.itcast.order.service包下的OrderService类中的queryOrderById方法。修改访问的url路径，用服务名代替ip、端口：</p>
-<p><img src="/2022/12/28/spring-cloud-%E5%AD%A6%E4%B9%A0/image-20210713224245731.png" alt="image-20210713224245731"></p>
-<p>spring会自动帮助我们从eureka-server端，根据userservice这个服务名称，获取实例列表，而后完成负载均衡。</p>
-<h1 id="4-Ribbon负载均衡"><a href="#4-Ribbon负载均衡" class="headerlink" title="4.Ribbon负载均衡"></a>4.Ribbon负载均衡</h1><p>上一节中，我们添加了@LoadBalanced注解，即可实现负载均衡功能，这是什么原理呢？</p>
-<h2 id="4-1-负载均衡原理"><a href="#4-1-负载均衡原理" class="headerlink" title="4.1.负载均衡原理"></a>4.1.负载均衡原理</h2><p>SpringCloud底层其实是利用了一个名为Ribbon的组件，来实现负载均衡功能的。</p>
-<p><img src="/2022/12/28/spring-cloud-%E5%AD%A6%E4%B9%A0/image-20210713224517686.png" alt="image-20210713224517686"></p>
-<p>那么我们发出的请求明明是<a target="_blank" rel="noopener" href="http://userservice/user/1%EF%BC%8C%E6%80%8E%E4%B9%88%E5%8F%98%E6%88%90%E4%BA%86http://localhost:8081%E7%9A%84%E5%91%A2%EF%BC%9F">http://userservice/user/1，怎么变成了http://localhost:8081的呢？</a></p>
-<h2 id="4-2-源码跟踪"><a href="#4-2-源码跟踪" class="headerlink" title="4.2.源码跟踪"></a>4.2.源码跟踪</h2><p>为什么我们只输入了service名称就可以访问了呢？之前还要获取ip和端口。</p>
-<p>显然有人帮我们根据service名称，获取到了服务实例的ip和端口。它就是<code>LoadBalancerInterceptor</code>，这个类会在对RestTemplate的请求进行拦截，然后从Eureka根据服务id获取服务列表，随后利用负载均衡算法得到真实的服务地址信息，替换服务id。</p>
-<p>我们进行源码跟踪：</p>
-<h3 id="1）LoadBalancerIntercepor"><a href="#1）LoadBalancerIntercepor" class="headerlink" title="1）LoadBalancerIntercepor"></a>1）LoadBalancerIntercepor</h3><p><img src="/2022/12/28/spring-cloud-%E5%AD%A6%E4%B9%A0/1525620483637.png" alt="1525620483637"></p>
-<p>可以看到这里的intercept方法，拦截了用户的HttpRequest请求，然后做了几件事：</p>
-<ul>
-<li><code>request.getURI()</code>：获取请求uri，本例中就是 <a target="_blank" rel="noopener" href="http://user-service/user/8">http://user-service/user/8</a></li>
-<li><code>originalUri.getHost()</code>：获取uri路径的主机名，其实就是服务id，<code>user-service</code></li>
-<li><code>this.loadBalancer.execute()</code>：处理服务id，和用户请求。</li>
-</ul>
-<p>这里的<code>this.loadBalancer</code>是<code>LoadBalancerClient</code>类型，我们继续跟入。</p>
-<h3 id="2）LoadBalancerClient"><a href="#2）LoadBalancerClient" class="headerlink" title="2）LoadBalancerClient"></a>2）LoadBalancerClient</h3><p>继续跟入execute方法：</p>
-<p><img src="/2022/12/28/spring-cloud-%E5%AD%A6%E4%B9%A0/1525620787090.png" alt="1525620787090"></p>
-<p>代码是这样的：</p>
-<ul>
-<li>getLoadBalancer(serviceId)：根据服务id获取ILoadBalancer，而ILoadBalancer会拿着服务id去eureka中获取服务列表并保存起来。</li>
-<li>getServer(loadBalancer)：利用内置的负载均衡算法，从服务列表中选择一个。本例中，可以看到获取了8082端口的服务</li>
-</ul>
-<p>放行后，再次访问并跟踪，发现获取的是8081：</p>
-<p> <img src="/2022/12/28/spring-cloud-%E5%AD%A6%E4%B9%A0/1525620835911.png" alt="1525620835911"></p>
-<p>果然实现了负载均衡。</p>
-<h3 id="3）负载均衡策略IRule"><a href="#3）负载均衡策略IRule" class="headerlink" title="3）负载均衡策略IRule"></a>3）负载均衡策略IRule</h3><p>在刚才的代码中，可以看到获取服务使通过一个<code>getServer</code>方法来做负载均衡:</p>
-<p> <img src="/2022/12/28/spring-cloud-%E5%AD%A6%E4%B9%A0/1525620835911.png" alt="1525620835911"></p>
-<p>我们继续跟入：</p>
-<p><img src="/2022/12/28/spring-cloud-%E5%AD%A6%E4%B9%A0/1544361421671.png" alt="1544361421671"></p>
-<p>继续跟踪源码chooseServer方法，发现这么一段代码：</p>
-<p> <img src="/2022/12/28/spring-cloud-%E5%AD%A6%E4%B9%A0/1525622652849.png" alt="1525622652849"></p>
-<p>我们看看这个rule是谁：</p>
-<p> <img src="/2022/12/28/spring-cloud-%E5%AD%A6%E4%B9%A0/1525622699666.png" alt="1525622699666"></p>
-<p>这里的rule默认值是一个<code>RoundRobinRule</code>，看类的介绍：</p>
-<p> <img src="/2022/12/28/spring-cloud-%E5%AD%A6%E4%B9%A0/1525622754316.png" alt="1525622754316"></p>
-<p>这不就是轮询的意思嘛。</p>
-<p>到这里，整个负载均衡的流程我们就清楚了。</p>
-<h3 id="4）总结"><a href="#4）总结" class="headerlink" title="4）总结"></a>4）总结</h3><p>SpringCloudRibbon的底层采用了一个拦截器，拦截了RestTemplate发出的请求，对地址做了修改。用一幅图来总结一下：</p>
-<p><img src="/2022/12/28/spring-cloud-%E5%AD%A6%E4%B9%A0/image-20210713224724673.png" alt="image-20210713224724673"></p>
-<p>基本流程如下：</p>
-<ul>
-<li>拦截我们的RestTemplate请求<a target="_blank" rel="noopener" href="http://userservice/user/1">http://userservice/user/1</a></li>
-<li>RibbonLoadBalancerClient会从请求url中获取服务名称，也就是user-service</li>
-<li>DynamicServerListLoadBalancer根据user-service到eureka拉取服务列表</li>
-<li>eureka返回列表，localhost:8081、localhost:8082</li>
-<li>IRule利用内置负载均衡规则，从列表中选择一个，例如localhost:8081</li>
-<li>RibbonLoadBalancerClient修改请求地址，用localhost:8081替代userservice，得到<a target="_blank" rel="noopener" href="http://localhost:8081/user/1%EF%BC%8C%E5%8F%91%E8%B5%B7%E7%9C%9F%E5%AE%9E%E8%AF%B7%E6%B1%82">http://localhost:8081/user/1，发起真实请求</a></li>
-</ul>
-<h2 id="4-3-负载均衡策略"><a href="#4-3-负载均衡策略" class="headerlink" title="4.3.负载均衡策略"></a>4.3.负载均衡策略</h2><h3 id="4-3-1-负载均衡策略"><a href="#4-3-1-负载均衡策略" class="headerlink" title="4.3.1.负载均衡策略"></a>4.3.1.负载均衡策略</h3><p>负载均衡的规则都定义在IRule接口中，而IRule有很多不同的实现类：</p>
-<p><img src="/2022/12/28/spring-cloud-%E5%AD%A6%E4%B9%A0/image-20210713225653000.png" alt="image-20210713225653000"></p>
-<p>不同规则的含义如下：</p>
-<table>
-<thead>
-<tr>
-<th><strong>内置负载均衡规则类</strong></th>
-<th><strong>规则描述</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td>RoundRobinRule</td>
-<td>简单轮询服务列表来选择服务器。它是Ribbon默认的负载均衡规则。</td>
-</tr>
-<tr>
-<td>AvailabilityFilteringRule</td>
-<td>对以下两种服务器进行忽略：   （1）在默认情况下，这台服务器如果3次连接失败，这台服务器就会被设置为“短路”状态。短路状态将持续30秒，如果再次连接失败，短路的持续时间就会几何级地增加。  （2）并发数过高的服务器。如果一个服务器的并发连接数过高，配置了AvailabilityFilteringRule规则的客户端也会将其忽略。并发连接数的上限，可以由客户端的<clientName>.<clientConfigNameSpace>.ActiveConnectionsLimit属性进行配置。</clientConfigNameSpace></clientName></td>
-</tr>
-<tr>
-<td>WeightedResponseTimeRule</td>
-<td>为每一个服务器赋予一个权重值。服务器响应时间越长，这个服务器的权重就越小。这个规则会随机选择服务器，这个权重值会影响服务器的选择。</td>
-</tr>
-<tr>
-<td><strong>ZoneAvoidanceRule</strong></td>
-<td>以区域可用的服务器为基础进行服务器的选择。使用Zone对服务器进行分类，这个Zone可以理解为一个机房、一个机架等。而后再对Zone内的多个服务做轮询。</td>
-</tr>
-<tr>
-<td>BestAvailableRule</td>
-<td>忽略那些短路的服务器，并选择并发数较低的服务器。</td>
-</tr>
-<tr>
-<td>RandomRule</td>
-<td>随机选择一个可用的服务器。</td>
-</tr>
-<tr>
-<td>RetryRule</td>
-<td>重试机制的选择逻辑</td>
-</tr>
-</tbody></table>
-<p>默认的实现就是ZoneAvoidanceRule，是一种轮询方案</p>
-<h3 id="4-3-2-自定义负载均衡策略"><a href="#4-3-2-自定义负载均衡策略" class="headerlink" title="4.3.2.自定义负载均衡策略"></a>4.3.2.自定义负载均衡策略</h3><p>通过定义IRule实现可以修改负载均衡规则，有两种方式：</p>
-<ol>
-<li>代码方式：在order-service中的OrderApplication类中，定义一个新的IRule：</li>
-</ol>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Bean</span></span><br><span class="line"><span class="keyword">public</span> IRule <span class="title function_">randomRule</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">RandomRule</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<ol start="2">
-<li>配置文件方式：在order-service的application.yml文件中，添加新的配置也可以修改规则：</li>
-</ol>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">userservice:</span> <span class="comment"># 给某个微服务配置负载均衡规则，这里是userservice服务</span></span><br><span class="line">  <span class="attr">ribbon:</span></span><br><span class="line">    <span class="attr">NFLoadBalancerRuleClassName:</span> <span class="string">com.netflix.loadbalancer.RandomRule</span> <span class="comment"># 负载均衡规则 </span></span><br></pre></td></tr></table></figure>
-
-
-
-<blockquote>
-<p><strong>注意</strong>，一般用默认的负载均衡规则，不做修改。</p>
-</blockquote>
-<h2 id="4-4-饥饿加载"><a href="#4-4-饥饿加载" class="headerlink" title="4.4.饥饿加载"></a>4.4.饥饿加载</h2><p>Ribbon默认是采用懒加载，即第一次访问时才会去创建LoadBalanceClient，请求时间会很长。</p>
-<p>而饥饿加载则会在项目启动时创建，降低第一次访问的耗时，通过下面配置开启饥饿加载：</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">ribbon:</span></span><br><span class="line">  <span class="attr">eager-load:</span></span><br><span class="line">    <span class="attr">enabled:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">clients:</span> <span class="string">userservice</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h1 id="5-Nacos注册中心"><a href="#5-Nacos注册中心" class="headerlink" title="5.Nacos注册中心"></a>5.Nacos注册中心</h1><p>国内公司一般都推崇阿里巴巴的技术，比如注册中心，SpringCloudAlibaba也推出了一个名为Nacos的注册中心。</p>
-<h2 id="5-1-认识和安装Nacos"><a href="#5-1-认识和安装Nacos" class="headerlink" title="5.1.认识和安装Nacos"></a>5.1.认识和安装Nacos</h2><p><a target="_blank" rel="noopener" href="https://nacos.io/">Nacos</a>是阿里巴巴的产品，现在是<a target="_blank" rel="noopener" href="https://spring.io/projects/spring-cloud">SpringCloud</a>中的一个组件。相比<a target="_blank" rel="noopener" href="https://github.com/Netflix/eureka">Eureka</a>功能更加丰富，在国内受欢迎程度较高。</p>
-<p><img src="/2022/12/28/spring-cloud-%E5%AD%A6%E4%B9%A0/image-20210713230444308.png" alt="image-20210713230444308"></p>
-<p>nacos启动命令，Windows命令</p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">startup.cmd <span class="literal">-m</span> standalone</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="5-2-服务注册到nacos"><a href="#5-2-服务注册到nacos" class="headerlink" title="5.2.服务注册到nacos"></a>5.2.服务注册到nacos</h2><p>Nacos是SpringCloudAlibaba的组件，而SpringCloudAlibaba也遵循SpringCloud中定义的服务注册、服务发现规范。因此使用Nacos和使用Eureka对于微服务来说，并没有太大区别。</p>
-<p>主要差异在于：</p>
-<ul>
-<li>依赖不同</li>
-<li>服务地址不同</li>
-</ul>
-<h3 id="1）引入依赖-2"><a href="#1）引入依赖-2" class="headerlink" title="1）引入依赖"></a>1）引入依赖</h3><p>在cloud-demo父工程的pom文件中的<code>&lt;dependencyManagement&gt;</code>中引入SpringCloudAlibaba的依赖：</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.alibaba.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-alibaba-dependencies<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.2.6.RELEASE<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">type</span>&gt;</span>pom<span class="tag">&lt;/<span class="name">type</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">scope</span>&gt;</span>import<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>然后在user-service和order-service中的pom文件中引入nacos-discovery依赖：</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.alibaba.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-starter-alibaba-nacos-discovery<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-
-
-<blockquote>
-<p><strong>注意</strong>：不要忘了注释掉eureka的依赖。</p>
-</blockquote>
-<h3 id="2）配置nacos地址"><a href="#2）配置nacos地址" class="headerlink" title="2）配置nacos地址"></a>2）配置nacos地址</h3><p>在user-service和order-service的application.yml中添加nacos地址：</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">cloud:</span></span><br><span class="line">    <span class="attr">nacos:</span></span><br><span class="line">      <span class="attr">server-addr:</span> <span class="string">localhost:8848</span></span><br></pre></td></tr></table></figure>
-
-
-
-<blockquote>
-<p><strong>注意</strong>：不要忘了注释掉eureka的地址</p>
-</blockquote>
-<h3 id="3）重启"><a href="#3）重启" class="headerlink" title="3）重启"></a>3）重启</h3><p>重启微服务后，登录nacos管理页面，可以看到微服务信息：</p>
-<p><img src="/2022/12/28/spring-cloud-%E5%AD%A6%E4%B9%A0/image-20210713231439607.png" alt="image-20210713231439607"></p>
-<h2 id="5-3-服务分级存储模型"><a href="#5-3-服务分级存储模型" class="headerlink" title="5.3.服务分级存储模型"></a>5.3.服务分级存储模型</h2><p>一个<strong>服务</strong>可以有多个<strong>实例</strong>，例如我们的user-service，可以有:</p>
-<ul>
-<li>127.0.0.1:8081</li>
-<li>127.0.0.1:8082</li>
-<li>127.0.0.1:8083</li>
-</ul>
-<p>假如这些实例分布于全国各地的不同机房，例如：</p>
-<ul>
-<li>127.0.0.1:8081，在上海机房</li>
-<li>127.0.0.1:8082，在上海机房</li>
-<li>127.0.0.1:8083，在杭州机房</li>
-</ul>
-<p>Nacos就将同一机房内的实例 划分为一个<strong>集群</strong>。</p>
-<p>也就是说，user-service是服务，一个服务可以包含多个集群，如杭州、上海，每个集群下可以有多个实例，形成分级模型，如图：</p>
-<p><img src="/2022/12/28/spring-cloud-%E5%AD%A6%E4%B9%A0/image-20210713232522531.png" alt="image-20210713232522531"></p>
-<p>微服务互相访问时，应该尽可能访问同集群实例，因为本地访问速度更快。当本集群内不可用时，才访问其它集群。例如：</p>
-<p><img src="/2022/12/28/spring-cloud-%E5%AD%A6%E4%B9%A0/image-20210713232658928.png" alt="image-20210713232658928"></p>
-<p>杭州机房内的order-service应该优先访问同机房的user-service。</p>
-<h3 id="5-3-1-给user-service配置集群"><a href="#5-3-1-给user-service配置集群" class="headerlink" title="5.3.1.给user-service配置集群"></a>5.3.1.给user-service配置集群</h3><p>修改user-service的application.yml文件，添加集群配置：</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">cloud:</span></span><br><span class="line">    <span class="attr">nacos:</span></span><br><span class="line">      <span class="attr">server-addr:</span> <span class="string">localhost:8848</span></span><br><span class="line">      <span class="attr">discovery:</span></span><br><span class="line">        <span class="attr">cluster-name:</span> <span class="string">HZ</span> <span class="comment"># 集群名称</span></span><br></pre></td></tr></table></figure>
-
-<p>重启两个user-service实例后，我们可以在nacos控制台看到下面结果：</p>
-<p><img src="/2022/12/28/spring-cloud-%E5%AD%A6%E4%B9%A0/image-20210713232916215.png" alt="image-20210713232916215"></p>
-<p>我们再次复制一个user-service启动配置，添加属性：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-Dserver.port=8083 -Dspring.cloud.nacos.discovery.cluster-name=SH</span><br></pre></td></tr></table></figure>
-
-<p>配置如图所示：</p>
-<p><img src="/2022/12/28/spring-cloud-%E5%AD%A6%E4%B9%A0/image-20210713233528982.png" alt="image-20210713233528982"></p>
-<p>启动UserApplication3后再次查看nacos控制台：</p>
-<p><img src="/2022/12/28/spring-cloud-%E5%AD%A6%E4%B9%A0/image-20210713233727923.png" alt="image-20210713233727923"></p>
-<h3 id="5-3-2-同集群优先的负载均衡"><a href="#5-3-2-同集群优先的负载均衡" class="headerlink" title="5.3.2.同集群优先的负载均衡"></a>5.3.2.同集群优先的负载均衡</h3><p>默认的<code>ZoneAvoidanceRule</code>并不能实现根据同集群优先来实现负载均衡。</p>
-<p>因此Nacos中提供了一个<code>NacosRule</code>的实现，可以优先从同集群中挑选实例。</p>
-<p>1）给order-service配置集群信息</p>
-<p>修改order-service的application.yml文件，添加集群配置：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">spring:</span><br><span class="line">  cloud:</span><br><span class="line">    nacos:</span><br><span class="line">      server-addr: localhost:8848</span><br><span class="line">      discovery:</span><br><span class="line">        cluster-name: HZ <span class="comment"># 集群名称</span></span><br></pre></td></tr></table></figure>
-
-
-
-<p>2）修改负载均衡规则</p>
-<p>修改order-service的application.yml文件，修改负载均衡规则：</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">userservice:</span></span><br><span class="line">  <span class="attr">ribbon:</span></span><br><span class="line">    <span class="attr">NFLoadBalancerRuleClassName:</span> <span class="string">com.alibaba.cloud.nacos.ribbon.NacosRule</span> <span class="comment"># 负载均衡规则 </span></span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="5-4-权重配置"><a href="#5-4-权重配置" class="headerlink" title="5.4.权重配置"></a>5.4.权重配置</h2><p>实际部署中会出现这样的场景：</p>
-<p>服务器设备性能有差异，部分实例所在机器性能较好，另一些较差，我们希望性能好的机器承担更多的用户请求。</p>
-<p>但默认情况下NacosRule是同集群内随机挑选，不会考虑机器的性能问题。</p>
-<p>因此，Nacos提供了权重配置来控制访问频率，权重越大则访问频率越高。</p>
-<p>在nacos控制台，找到user-service的实例列表，点击编辑，即可修改权重：</p>
-<p><img src="/2022/12/28/spring-cloud-%E5%AD%A6%E4%B9%A0/image-20210713235133225.png" alt="image-20210713235133225"></p>
-<p>在弹出的编辑窗口，修改权重：</p>
-<p><img src="/2022/12/28/spring-cloud-%E5%AD%A6%E4%B9%A0/image-20210713235235219.png" alt="image-20210713235235219"></p>
-<blockquote>
-<p><strong>注意</strong>：如果权重修改为0，则该实例永远不会被访问</p>
-</blockquote>
-<h2 id="5-5-环境隔离"><a href="#5-5-环境隔离" class="headerlink" title="5.5.环境隔离"></a>5.5.环境隔离</h2><p>Nacos提供了namespace来实现环境隔离功能。</p>
-<ul>
-<li>nacos中可以有多个namespace</li>
-<li>namespace下可以有group、service等</li>
-<li>不同namespace之间相互隔离，例如不同namespace的服务互相不可见</li>
-</ul>
-<p><img src="/2022/12/28/spring-cloud-%E5%AD%A6%E4%B9%A0/image-20210714000101516.png" alt="image-20210714000101516"></p>
-<h3 id="5-5-1-创建namespace"><a href="#5-5-1-创建namespace" class="headerlink" title="5.5.1.创建namespace"></a>5.5.1.创建namespace</h3><p>默认情况下，所有service、data、group都在同一个namespace，名为public：</p>
-<p><img src="/2022/12/28/spring-cloud-%E5%AD%A6%E4%B9%A0/image-20210714000414781.png" alt="image-20210714000414781"></p>
-<p>我们可以点击页面新增按钮，添加一个namespace：</p>
-<p><img src="/2022/12/28/spring-cloud-%E5%AD%A6%E4%B9%A0/image-20210714000440143.png" alt="image-20210714000440143"></p>
-<p>然后，填写表单：</p>
-<p><img src="/2022/12/28/spring-cloud-%E5%AD%A6%E4%B9%A0/image-20210714000505928.png" alt="image-20210714000505928"></p>
-<p>就能在页面看到一个新的namespace：</p>
-<p><img src="/2022/12/28/spring-cloud-%E5%AD%A6%E4%B9%A0/image-20210714000522913.png" alt="image-20210714000522913"></p>
-<h3 id="5-5-2-给微服务配置namespace"><a href="#5-5-2-给微服务配置namespace" class="headerlink" title="5.5.2.给微服务配置namespace"></a>5.5.2.给微服务配置namespace</h3><p>给微服务配置namespace只能通过修改配置来实现。</p>
-<p>例如，修改order-service的application.yml文件：</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">cloud:</span></span><br><span class="line">    <span class="attr">nacos:</span></span><br><span class="line">      <span class="attr">server-addr:</span> <span class="string">localhost:8848</span></span><br><span class="line">      <span class="attr">discovery:</span></span><br><span class="line">        <span class="attr">cluster-name:</span> <span class="string">HZ</span></span><br><span class="line">        <span class="attr">namespace:</span> <span class="string">492a7d5d-237b-46a1-a99a-fa8e98e4b0f9</span> <span class="comment"># 命名空间，填ID</span></span><br></pre></td></tr></table></figure>
-
-
-
-<p>重启order-service后，访问控制台，可以看到下面的结果：</p>
-<p><img src="/2022/12/28/spring-cloud-%E5%AD%A6%E4%B9%A0/image-20210714000830703.png" alt="image-20210714000830703"></p>
-<p><img src="/2022/12/28/spring-cloud-%E5%AD%A6%E4%B9%A0/image-20210714000837140.png" alt="image-20210714000837140"></p>
-<p>此时访问order-service，因为namespace不同，会导致找不到userservice，控制台会报错：</p>
-<p><img src="/2022/12/28/spring-cloud-%E5%AD%A6%E4%B9%A0/image-20210714000941256.png" alt="image-20210714000941256"></p>
-<h2 id="5-6-Nacos与Eureka的区别"><a href="#5-6-Nacos与Eureka的区别" class="headerlink" title="5.6.Nacos与Eureka的区别"></a>5.6.Nacos与Eureka的区别</h2><p>Nacos的服务实例分为两种l类型：</p>
-<ul>
-<li><p>临时实例：如果实例宕机超过一定时间，会从服务列表剔除，默认的类型。</p>
-</li>
-<li><p>非临时实例：如果实例宕机，不会从服务列表剔除，也可以叫永久实例。</p>
-</li>
-</ul>
-<p>配置一个服务实例为永久实例：</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">cloud:</span></span><br><span class="line">    <span class="attr">nacos:</span></span><br><span class="line">      <span class="attr">discovery:</span></span><br><span class="line">        <span class="attr">ephemeral:</span> <span class="literal">false</span> <span class="comment"># 设置为非临时实例</span></span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<p>Nacos和Eureka整体结构类似，服务注册、服务拉取、心跳等待，但是也存在一些差异：</p>
-<p><img src="/2022/12/28/spring-cloud-%E5%AD%A6%E4%B9%A0/image-20210714001728017.png" alt="image-20210714001728017"></p>
-<ul>
-<li><p>Nacos与eureka的共同点</p>
-<ul>
-<li>都支持服务注册和服务拉取</li>
-<li>都支持服务提供者心跳方式做健康检测</li>
-</ul>
-</li>
-<li><p>Nacos与Eureka的区别</p>
-<ul>
-<li>Nacos支持服务端主动检测提供者状态：临时实例采用心跳模式，非临时实例采用主动检测模式</li>
-<li>临时实例心跳不正常会被剔除，非临时实例则不会被剔除</li>
-<li>Nacos支持服务列表变更的消息推送模式，服务列表更新更及时</li>
-<li>Nacos集群默认采用AP方式，当集群中存在非临时实例时，采用CP模式；Eureka采用AP方式</li>
-</ul>
-</li>
-</ul>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/12/28/spring-cloud-%E5%AD%A6%E4%B9%A0/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -1218,7 +410,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://hyaces.github.io/2022/12/26/test2/">
+    <link itemprop="mainEntityOfPage" href="https://hyaces.github.io/2022/11/20/hello-hexo/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/share.jpg">
@@ -1232,172 +424,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2022/12/26/test2/" class="post-title-link" itemprop="url">test2</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2022-12-26 00:53:08 / 修改时间：02:01:12" itemprop="dateCreated datePublished" datetime="2022-12-26T00:53:08+08:00">2022-12-26</time>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>7</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>1111\11</p>
-<p><img src="/2022/12/26/test2/share.jpg"></p>
-
-      
-    </div>
-
-    
-    
-    
-     
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://hyaces.github.io/2022/12/25/test1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/share.jpg">
-      <meta itemprop="name" content="Hhhy">
-      <meta itemprop="description" content="机会是靠自己抓住的">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="晴空万里">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/12/25/test1/" class="post-title-link" itemprop="url">test1</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2022-12-25 23:22:33" itemprop="dateCreated datePublished" datetime="2022-12-25T23:22:33+08:00">2022-12-25</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-12-26 00:45:02" itemprop="dateModified" datetime="2022-12-26T00:45:02+08:00">2022-12-26</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%90%8E%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">后端</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>10</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>图片测试</p>
-<p><img src="/images/%E6%A2%85%E5%88%A9%E5%8F%B7.png"></p>
-<h1 id="测试成功"><a href="#测试成功" class="headerlink" title="测试成功"></a>测试成功</h1><h2 id="2"><a href="#2" class="headerlink" title="2"></a>2</h2><h3 id="3"><a href="#3" class="headerlink" title="3"></a>3</h3>
-      
-    </div>
-
-    
-    
-    
-     
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://hyaces.github.io/2022/11/20/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/share.jpg">
-      <meta itemprop="name" content="Hhhy">
-      <meta itemprop="description" content="机会是靠自己抓住的">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="晴空万里">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/11/20/hello-world/" class="post-title-link" itemprop="url">初始化</a>
+            <a href="/2022/11/20/hello-hexo/" class="post-title-link" itemprop="url">初始化</a>
         </h2>
 
         <div class="post-meta">
@@ -1414,7 +441,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-12-25 23:23:32" itemprop="dateModified" datetime="2022-12-25T23:23:32+08:00">2022-12-25</time>
+                <time title="修改时间：2022-12-29 22:26:30" itemprop="dateModified" datetime="2022-12-29T22:26:30+08:00">2022-12-29</time>
               </span>
 
           <br>
@@ -1423,7 +450,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>188</span>
+              <span>180</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -1442,20 +469,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>欢迎来到我的博客</p>
-<h2 id="Hexo基础使用"><a href="#Hexo基础使用" class="headerlink" title="Hexo基础使用"></a>Hexo基础使用</h2><h3 id="创建一个新帖子"><a href="#创建一个新帖子" class="headerlink" title="创建一个新帖子"></a>创建一个新帖子</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>更多: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="启动本地服务"><a href="#启动本地服务" class="headerlink" title="启动本地服务"></a>启动本地服务</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br><span class="line"><span class="comment"># 或者</span></span><br><span class="line">$ hexo s</span><br></pre></td></tr></table></figure>
-
-<p>更多: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="生成静态文件"><a href="#生成静态文件" class="headerlink" title="生成静态文件"></a>生成静态文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br><span class="line"><span class="comment"># 或者</span></span><br><span class="line">$ hexo g</span><br></pre></td></tr></table></figure>
-
-<p>更多: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="部署到远程站点"><a href="#部署到远程站点" class="headerlink" title="部署到远程站点"></a>部署到远程站点</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br><span class="line"><span class="comment"># 或者</span></span><br><span class="line">$ hexo d</span><br></pre></td></tr></table></figure>
-
-<p>更多: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
+          <h2 id="Hexo基础使用"><a href="#Hexo基础使用" class="headerlink" title="Hexo基础使用"></a>Hexo基础使用</h2>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/11/20/hello-hexo/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -1539,7 +561,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-count">3</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1552,7 +574,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
